@@ -1,0 +1,128 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="12dp">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:layout_marginEnd="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#12365B"
+                android:text="Traffic Scotland"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:padding="12dp"/>
+
+            <Button
+                android:id="@+id/btnAll"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:backgroundTint="#175A9C"
+                android:textColor="#FFFFFF"
+                android:text="All"/>
+
+            <Button
+                android:id="@+id/btnIncidents"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:backgroundTint="#175A9C"
+                android:textColor="#FFFFFF"
+                android:text="Incidents"/>
+
+            <Button
+                android:id="@+id/btnRoadworks"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:backgroundTint="#175A9C"
+                android:textColor="#FFFFFF"
+                android:text="Roadworks"/>
+
+            <EditText
+                android:id="@+id/searchInput"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Search road, e.g. M8"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DELAY SEVERITY"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:paddingTop="6dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="● Delays"
+                android:textColor="#289B50"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="● Long delays"
+                android:textColor="#E68214"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="● Very long delays"
+                android:textColor="#DC4646"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:indeterminateTint="#1976D2"/>
+
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Loading traffic data..."
+            android:textSize="13sp"
+            android:padding="8dp"/>
+
+        <ListView
+            android:id="@+id/trafficList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:dividerHeight="1dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

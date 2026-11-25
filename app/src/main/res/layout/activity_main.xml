@@ -1,0 +1,158 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#12365B"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Traffic Scotland"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Incidents and Roadworks"
+            android:textColor="#DCE8F5"
+            android:textSize="14sp"
+            android:paddingTop="4dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp">
+
+        <Button
+            android:id="@+id/btnAll"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="0.8"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="#175A9C"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:minWidth="0dp"
+            android:paddingHorizontal="2dp"
+            android:singleLine="true"
+            android:text="All"/>
+
+        <Button
+            android:id="@+id/btnIncidents"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="#175A9C"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:minWidth="0dp"
+            android:paddingHorizontal="2dp"
+            android:singleLine="true"
+            android:text="Incidents"/>
+
+        <Button
+            android:id="@+id/btnRoadworks"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1.2"
+            android:backgroundTint="#175A9C"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:minWidth="0dp"
+            android:paddingHorizontal="2dp"
+            android:singleLine="true"
+            android:text="Roadworks"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/searchInput"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:hint="Search road, e.g. M8"
+        android:inputType="text"
+        android:singleLine="true"
+        android:textSize="16sp"
+        android:padding="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DELAY SEVERITY"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:paddingTop="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="6dp"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="● Delays"
+            android:textColor="#289B50"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="● Long"
+            android:textColor="#E68214"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="● Very long"
+            android:textColor="#DC4646"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:indeterminateTint="#1976D2"/>
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Loading traffic data..."
+        android:textSize="13sp"
+        android:padding="8dp"/>
+
+    <ListView
+        android:id="@+id/trafficList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:dividerHeight="1dp"/>
+
+</LinearLayout>
